@@ -1,0 +1,40 @@
+{
+    'mod+b': bindPagedownButton('bold'),
+    'mod+i': bindPagedownButton('italic'),
+    'mod+l': bindPagedownButton('link'),
+    'mod+q': bindPagedownButton('quote'),
+    'mod+k': bindPagedownButton('code'),
+    'mod+g': bindPagedownButton('image'),
+    'mod+o': bindPagedownButton('olist'),
+    'mod+u': bindPagedownButton('ulist'),
+    'mod+h': bindPagedownButton('heading'),
+    'mod+r': bindPagedownButton('hr'),
+    'mod+z': bindPagedownButton('undo'),
+    'mod+y': bindPagedownButton('redo'),
+    'mod+shift+z': bindPagedownButton('redo'),
+    'mod+d': function(evt) {
+        $('.button-open-discussion').click();
+        evt.preventDefault();
+    },
+    'mod+m': function(evt) {
+        $('.menu-panel .toggle-button').click();
+        evt.preventDefault();
+    },
+    'mod+s': function(evt) {
+        $('.document-panel .toggle-button').click();
+        evt.preventDefault();
+    },
+    '= = > space': function() {
+        expand('==> ', '⇒ ');
+    },
+    '< = = space': function() {
+        expand('<== ', '⇐ ');
+    },
+    'mod+shift+m': function(evt) {
+        $('.action-sync-import-dialog-mywriteon').click();
+        evt.preventDefault();
+    },
+    'W r i t e O n': function() {
+        eventMgr.onMessage("You are stunned, aren't you? Thanks for loving WriteOn");
+    }
+}
